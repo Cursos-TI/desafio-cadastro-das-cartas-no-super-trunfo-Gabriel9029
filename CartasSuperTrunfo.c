@@ -19,6 +19,7 @@
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
     
     int main() {
+        
         char Estado[20], Codigo[50], Nome_da_cidade[50];  /*Aqui estão localizados as respectivas variavéis de cada atributo.*/
         int Populacao, NPT;
         float Area, PIB;
