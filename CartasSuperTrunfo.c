@@ -20,21 +20,22 @@
     
     int main() {
         
-        char Estado[20], Codigo[50], Nome_da_cidade[50];  /*Aqui estão localizados as respectivas variavéis de cada atributo.*/
+        char Estado[50], Codigo[50], Nome_da_cidade[50];  /*Aqui estão localizados as respectivas variavéis de cada atributo.*/
         int Populacao, NPT;
-        float Area, PIB;
-    
+        float Area, PIB,Densidade_Populacional, PIB_Per_Capita;
+
+
         printf("Vamos Começar. \n");
         printf("A seguir, informe os dados de suas cartas. \n");
     
         printf("Para a primeira carta, informe o Estado:"); /*a partir daqui, as informações são solicitadas e então analisadas pelo scanf.*/
-        scanf(" %s", &Estado);
+        scanf(" %s", Estado);
     
         printf("Informe o Codigo:");
-        scanf(" %s", &Codigo);
+        scanf(" %s", Codigo);
     
         printf("Informe o Nome da Cidade:");
-        scanf(" %s", &Nome_da_cidade);
+        scanf(" %s", Nome_da_cidade);
     
         printf("Informe a populacao:");
         scanf("%d", &Populacao);
@@ -48,6 +49,9 @@
         printf("Informe o Numero de Pontos Turisticos:");
         scanf("%d", &NPT);
     
+        Densidade_Populacional = Populacao / Area;
+        PIB_Per_Capita = (PIB * 1000000000) / Populacao;
+
         printf("Carta 1: \n");          /*Até serem entregues ao usuário no formato exigido pelo desafio.*/
         printf("Estado: %s\n", Estado);
         printf("Codigo: %s\n", Codigo);
@@ -56,17 +60,19 @@
         printf("Area: %.2fkm²\n", Area);
         printf("PIB: %.f bilhoes de reais\n", PIB);
         printf("Numero de Pontos Turisticos: %d\n", NPT);
-    
+        printf("Densidade Populacional:" "%.2fhab/km²\n", Densidade_Populacional);
+        printf("PIB per capita: %.2f\n", PIB_Per_Capita);
+
         printf("Agora, os dados da segunda carta. \n"); /*A segunda carta é então solicitada.*/
     
         printf("Informe o Estado:");
-        scanf(" %s", &Estado);
+        scanf(" %s", Estado);
     
         printf("Informe o Codigo:");
-        scanf(" %s", &Codigo);
+        scanf(" %s", Codigo);
     
         printf("Informe o Nome da Cidade:");
-        scanf(" %s", &Nome_da_cidade);
+        scanf(" %s", Nome_da_cidade);
     
         printf("Informe a populacao:");
         scanf("%d", &Populacao);
@@ -80,6 +86,9 @@
         printf("Informe o Numero de Pontos Turisticos:");
         scanf("%d", &NPT);
     
+        Densidade_Populacional = Populacao / Area;
+        PIB_Per_Capita = (PIB * 1000000000)/ Populacao;
+
         printf("Carta 2: \n");    
         printf("Estado: %s\n", Estado);
         printf("Codigo: %s\n", Codigo);
@@ -87,7 +96,9 @@
         printf("Populacao: %d\n", Populacao);
         printf("Area: %.2fkm²\n", Area);
         printf("PIB: %.2f bilhoes de reais\n", PIB);
-        printf("Numero de Pontos Turisticos: %d\n", NPT);  /*E por fim o codigo se encerra ao emitir a ultima carta. */
+        printf("Numero de Pontos Turisticos: %d\n", NPT);
+        printf("Densidade Populacional:" "%.2fhab/km²\n", Densidade_Populacional);
+        printf("PIB per capita: %.2f\n", PIB_Per_Capita); /*E por fim o codigo se encerra ao emitir a ultima carta. */
     
         return 0;
 }
